@@ -1,0 +1,26 @@
+1] package.json is a configuration for npm.
+
+2] there are two types of packages
+
+one is dev depencies
+in the development phase
+
+and normal depency
+production also
+
+3] package-lock.json - keeps a track of exact version of package
+package.json - keeps a track of version of the package but will have a caret or tilda which will give approx version.
+
+4] node_modules - contains all the code we fetch from npm
+
+5] Transitive Dependency​
+A transitive dependency is like a package depending on the other package eg like parcel depending on other package.
+
+6] if we have package.json and package-lock.json we can recreate our node_modules
+
+7] npm used to install and npx is to execute
+
+8] Parcel
+ - Dev Build
+ - Local Server
+ - HMR - Hot Module Replacement
