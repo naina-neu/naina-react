@@ -1,37 +1,45 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-/**
- * <div id="parent">
- *      <div id="child">
- *          <h1> I'm h1 tag</h1>
- *           <h2> I'm h2 tag</h2>
- *      </div>
- *      <div id="child">
- *          <h1> I'm h1 tag</h1>
- *           <h2> I'm h2 tag</h2>
- *      </div>
- * </div>
- *
- * ReactElement(Object) => HTML(Browser Understands)
- */
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "This is Namaste React"),
-    React.createElement("h2", {}, "I' m an H2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I' m an H1 tag"),
-    React.createElement("h2", {}, "I' m an H2 tag"),
-  ]),
-]);
+// React.createElement => ReactElement => Object => HTMLElement(render)
+// const heading = React.createElement("h1", { id: "heading" }, "Namaste React");
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(heading);
 
-//JSX next episode
-
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Hello World from React"
+// JSX - is not HTML in JS but HTML like syntax
+// JSX (traspiled before it reaches the JS) - parcel - babel
+// JSX => Babel transpiles it to React.createElement => ReactElement =>  Object => HTMLElement(render)
+// Attributes in JSX is in Camel Case
+const Title = () => (
+  <h1 id="heading" className="head" tabIndex="1">
+    Namaste React using JSX
+  </h1>
 );
+
+const elem = <span>React Element</span>;
+// React Component
+// Class Based Component - OLD
+// Functional Component - NEW
+const HeadingComponent = () => {
+  return <h1>Namaste React Functional Component 1</h1>;
+};
+
+const number = 10000;
+// Component Composition
+const HeadingComponent2 = () => (
+  <div id="container">
+    <Title />
+    <h2>
+      {number}
+      {Title}
+      {elem}
+      {console.log("fsasdfsdfasdfsd")}
+    </h2>
+    <h1>Namaste React Functional Component 2</h1>
+  </div>
+);
+
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<HeadingComponent2 />);
