@@ -21,6 +21,25 @@ A transitive dependency is like a package depending on the other package eg like
 7] npm used to install and npx is to execute
 
 8] Parcel
- - Dev Build
- - Local Server
- - HMR - Hot Module Replacement
+
+- Dev Build
+- Local Server
+- HMR - Hot Module Replacement
+
+9] Two types of export/import
+
+- Default Export/Import
+
+export default Component;
+import Component from "path";
+
+Named Export/ Import
+
+export const Component;
+import {Component} from 'path';
+
+#React Hooks
+
+(Normal JS utility function)
+-useState() - superpowerful react variables
+-useEffect()
